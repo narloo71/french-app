@@ -1,0 +1,9 @@
+{
+  "name": "french-app",
+  "private": true,
+  "description": "Installable web app for practising French",
+  "scripts": {
+    "test": "node --test tests/",
+    "start": "python -m http.server 8000"
+  }
+}

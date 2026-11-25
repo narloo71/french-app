@@ -1,0 +1,30 @@
+// Verb data. Imparfait, futur and conditionnel are built from stems; subjonctif is either
+// [stem for je/tu/il/ils, stem for nous/vous] or all six forms when fully irregular.
+window.VERBS = [
+  {inf:"être",     en:"to be",        pres:["suis","es","est","sommes","êtes","sont"],                         imp:"ét",       fut:"ser",      subj:["sois","sois","soit","soyons","soyez","soient"], pp:"été",    aux:"avoir"},
+  {inf:"avoir",    en:"to have",      pres:["ai","as","a","avons","avez","ont"],                               imp:"av",       fut:"aur",      subj:["aie","aies","ait","ayons","ayez","aient"],       pp:"eu",     aux:"avoir"},
+  {inf:"aller",    en:"to go",        pres:["vais","vas","va","allons","allez","vont"],                        imp:"all",      fut:"ir",       subj:["aill","all"],        pp:"allé",   aux:"être"},
+  {inf:"faire",    en:"to do, make",  pres:["fais","fais","fait","faisons","faites","font"],                   imp:"fais",     fut:"fer",      subj:["fass","fass"],       pp:"fait",   aux:"avoir"},
+  {inf:"pouvoir",  en:"to be able to",pres:["peux","peux","peut","pouvons","pouvez","peuvent"],                imp:"pouv",     fut:"pourr",    subj:["puiss","puiss"],     pp:"pu",     aux:"avoir"},
+  {inf:"vouloir",  en:"to want",      pres:["veux","veux","veut","voulons","voulez","veulent"],                imp:"voul",     fut:"voudr",    subj:["veuill","voul"],     pp:"voulu",  aux:"avoir"},
+  {inf:"devoir",   en:"to have to, owe", pres:["dois","dois","doit","devons","devez","doivent"],               imp:"dev",      fut:"devr",     subj:["doiv","dev"],        pp:"dû",     aux:"avoir"},
+  {inf:"savoir",   en:"to know (a fact)", pres:["sais","sais","sait","savons","savez","savent"],               imp:"sav",      fut:"saur",     subj:["sach","sach"],       pp:"su",     aux:"avoir"},
+  {inf:"venir",    en:"to come",      pres:["viens","viens","vient","venons","venez","viennent"],              imp:"ven",      fut:"viendr",   subj:["vienn","ven"],       pp:"venu",   aux:"être"},
+  {inf:"tenir",    en:"to hold",      pres:["tiens","tiens","tient","tenons","tenez","tiennent"],              imp:"ten",      fut:"tiendr",   subj:["tienn","ten"],       pp:"tenu",   aux:"avoir"},
+  {inf:"prendre",  en:"to take",      pres:["prends","prends","prend","prenons","prenez","prennent"],          imp:"pren",     fut:"prendr",   subj:["prenn","pren"],      pp:"pris",   aux:"avoir"},
+  {inf:"mettre",   en:"to put",       pres:["mets","mets","met","mettons","mettez","mettent"],                 imp:"mett",     fut:"mettr",    subj:["mett","mett"],       pp:"mis",    aux:"avoir"},
+  {inf:"dire",     en:"to say",       pres:["dis","dis","dit","disons","dites","disent"],                      imp:"dis",      fut:"dir",      subj:["dis","dis"],         pp:"dit",    aux:"avoir"},
+  {inf:"voir",     en:"to see",       pres:["vois","vois","voit","voyons","voyez","voient"],                   imp:"voy",      fut:"verr",     subj:["voi","voy"],         pp:"vu",     aux:"avoir"},
+  {inf:"croire",   en:"to believe",   pres:["crois","crois","croit","croyons","croyez","croient"],             imp:"croy",     fut:"croir",    subj:["croi","croy"],       pp:"cru",    aux:"avoir"},
+  {inf:"recevoir", en:"to receive",   pres:["reçois","reçois","reçoit","recevons","recevez","reçoivent"],      imp:"recev",    fut:"recevr",   subj:["reçoiv","recev"],    pp:"reçu",   aux:"avoir"},
+  {inf:"boire",    en:"to drink",     pres:["bois","bois","boit","buvons","buvez","boivent"],                  imp:"buv",      fut:"boir",     subj:["boiv","buv"],        pp:"bu",     aux:"avoir"},
+  {inf:"écrire",   en:"to write",     pres:["écris","écris","écrit","écrivons","écrivez","écrivent"],          imp:"écriv",    fut:"écrir",    subj:["écriv","écriv"],     pp:"écrit",  aux:"avoir"},
+  {inf:"lire",     en:"to read",      pres:["lis","lis","lit","lisons","lisez","lisent"],                      imp:"lis",      fut:"lir",      subj:["lis","lis"],         pp:"lu",     aux:"avoir"},
+  {inf:"connaître",en:"to know (be familiar with)", pres:["connais","connais","connaît","connaissons","connaissez","connaissent"], imp:"connaiss", fut:"connaîtr", subj:["connaiss","connaiss"], pp:"connu", aux:"avoir"},
+  {inf:"partir",   en:"to leave",     pres:["pars","pars","part","partons","partez","partent"],                imp:"part",     fut:"partir",   subj:["part","part"],       pp:"parti",  aux:"être"},
+  {inf:"sortir",   en:"to go out",    pres:["sors","sors","sort","sortons","sortez","sortent"],                imp:"sort",     fut:"sortir",   subj:["sort","sort"],       pp:"sorti",  aux:"être"},
+  {inf:"parler",   en:"to speak (-er)", pres:["parle","parles","parle","parlons","parlez","parlent"],          imp:"parl",     fut:"parler",   subj:["parl","parl"],       pp:"parlé",  aux:"avoir"},
+  {inf:"aimer",    en:"to like, love (-er)", pres:["aime","aimes","aime","aimons","aimez","aiment"],           imp:"aim",      fut:"aimer",    subj:["aim","aim"],         pp:"aimé",   aux:"avoir"},
+  {inf:"finir",    en:"to finish (-ir)", pres:["finis","finis","finit","finissons","finissez","finissent"],    imp:"finiss",   fut:"finir",    subj:["finiss","finiss"],   pp:"fini",   aux:"avoir"},
+  {inf:"vendre",   en:"to sell (-re)", pres:["vends","vends","vend","vendons","vendez","vendent"],             imp:"vend",     fut:"vendr",    subj:["vend","vend"],       pp:"vendu",  aux:"avoir"}
+];
