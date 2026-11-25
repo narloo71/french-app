@@ -1,10 +1,10 @@
 // Offline support: serve from cache, refresh the cache in the background.
 // Bump VERSION when you change files so phones pick up the update.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = 'francais-' + VERSION;
 const ASSETS = [
   './', './index.html', './style.css', './manifest.webmanifest',
-  './js/core.js', './js/app.js', './data/vocab.js', './data/verbs.js',
+  './js/core.js', './js/i18n.js', './js/app.js', './data/vocab.js', './data/verbs.js',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'
 ];
 

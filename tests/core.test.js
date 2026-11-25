@@ -79,3 +79,17 @@ test('spaced repetition intervals grow and lapses reset', () => {
   assert.equal(lapsed.due, 120); assert.equal(lapsed.reps, 0); assert.ok(lapsed.ease < c.ease);
   assert.equal(C.schedule(null, 3, 0).ivl, 4);
 });
+
+test('interface strings: every key has English and French, and every key used exists', () => {
+  require('../js/i18n.js');
+  for (const [k, v] of Object.entries(STRINGS)) {
+    assert.ok(Array.isArray(v) && v.length === 2 && v[0] && v[1], 'bad string ' + k);
+    const holes = s => (s.match(/\{\d\}/g) || []).sort().join();
+    assert.equal(holes(v[0]), holes(v[1]), 'placeholder mismatch in ' + k);
+  }
+  const src = require('fs').readFileSync(require('path').join(__dirname, '../js/app.js'), 'utf8');
+  const used = [...src.matchAll(/\bt[p]?\('([a-zA-Z0-9_]+)'\s*[,)]/g)].map(m => m[1]);
+  for (const k of used) assert.ok(STRINGS[k], 'missing string ' + k);
+  for (const prefix of ['tense_', 'lvl', 'g', 'q_', 'fb_', 'nav_']) assert.ok(Object.keys(STRINGS).some(k => k.startsWith(prefix)), prefix);
+  for (const tn of C.TENSES) assert.ok(STRINGS['tense_' + tn.id], 'tense ' + tn.id);
+});
